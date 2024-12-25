@@ -1,0 +1,25 @@
+$header_height: 40px;
+$menu_width: 200px;
+$footer_height: 80px;
+
+.container {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+.header_wrapper {
+    height: $header_height;
+    width: 100%;
+}
+
+.content_wrapper {
+    height: calc(100vh - $header_height - $footer_height);
+    overflow-y: scroll;
+    padding: 10px;
+    box-shadow: 0px 0px 20px -10px #FF6347FF;
+}
+
+.footer_wrapper {
+    height: $footer_height;
+}

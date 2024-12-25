@@ -1,0 +1,45 @@
+@import '@/assets/css/vars';
+
+.item {
+  padding: 5px;
+}
+
+.item:hover {
+  color: $primary-color;
+}
+
+.btn_logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+  background: transparent;
+  border: 1px $primary-color solid;
+  cursor: pointer;
+  padding: 12px 12px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.btn_logout:hover {
+  background: $primary-color;
+  color: #222;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 10px;
+}
+
+.nav_user_item {
+  color: $primary-color;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

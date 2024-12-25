@@ -1,0 +1,19 @@
+@import '@/assets/css/vars';
+
+.button {
+  background-color: transparent;
+  color: $color-orange-light;
+  border: 1px solid $primary-color;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 15px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.button:hover {
+  color: $primary-color;
+}

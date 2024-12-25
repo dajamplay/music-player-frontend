@@ -1,0 +1,108 @@
+@import "@/assets/css/vars";
+
+.track_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.track_container_active {
+  border: 1px solid $color-orange;
+  background-color: $color-orange-dark;
+}
+
+.track_container_over {
+  border-top: 2px solid $color-orange;
+  background-color: #444;
+}
+
+.track_container:hover {
+  background-color: $color-orange-dark;
+}
+
+.track_image {
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  align-self: start;
+}
+
+.track_title {
+  width: 100%;
+  justify-content: start;
+  padding: 5px;
+}
+
+.play_pause_button {
+  padding: 5px;
+  margin-right: 5px;
+  height: 20px;
+}
+
+.play_pause_button * {
+  fill: $color-orange;
+}
+
+.play_pause_button:hover * {
+  fill: $color-orange-light;
+}
+
+.add_track_to_queue {
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 10px;
+  border: 1px solid $color-orange;
+  border-radius: 22px;
+  text-align: center;
+}
+
+.add_track_to_queue:hover {
+  background-color: $color-orange;
+}
+
+.track_queue_settings {
+  padding: 5px;
+  margin: 5px;
+  height: 30px;
+}
+
+.track_queue_settings * {
+  fill: $color-orange;
+}
+
+.track_queue_settings:hover * {
+  fill: $color-orange-light;
+}
+
+.track_queue_settings_modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $color-orange;
+  height: 60px;
+  width: calc(100% - 50px);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track_queue_settings_modal_delete {
+  cursor: pointer;
+  height: 40px;
+}
+
+.track_queue_settings_modal_delete * {
+  fill: $color-orange-light;
+}
+
+.track_container_target_drag {
+  background-color: $color-orange;
+}

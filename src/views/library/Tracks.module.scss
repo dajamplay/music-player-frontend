@@ -1,0 +1,26 @@
+@import "@/assets/css/vars";
+
+.search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.tracks_container {
+  overflow-y: scroll;
+}
+
+.search {
+  background-color: #333;
+  border-radius: 15px;
+  border: solid $form-primary-color 1px;
+  padding: 5px 10px;
+  width: 100%;
+  height: 30px;
+}
+
+.search:focus{
+  outline: 0;
+  border: solid $color-orange-light 1px;
+}

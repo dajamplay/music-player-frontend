@@ -1,0 +1,71 @@
+@import "vars";
+
+@font-face {
+    font-family: 'LogoFont';
+    src: url(../fonts/ProtestGuerrilla-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'PTSansRegular';
+    src: url(../fonts/PTSans-Regular.ttf);
+}
+
+* {
+    color: $app-font-color;
+    font-size: $app-font-size;
+    box-sizing: border-box;
+    font-family: PTSansRegular, sans-serif;
+    transition: all .2s linear;
+}
+
+a {
+    text-decoration: none;
+    color: $color-orange-light;
+}
+
+a:hover {
+    color: $form-primary-color;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    //overflow-y: scroll;
+    overflow: hidden;
+    //min-width: 360px;
+}
+
+.default_container {
+    background: url("../img/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+::selection {
+    background: #f59b8c;
+}
+
+::-moz-selection {
+    background: #f59b8c;
+}
+
+h1 {
+    font-size: $app-font-size-h1;
+}
+
+h2 {
+    font-size: $app-font-size-h2;
+}
+
+h3, h4, h5, h6 {
+    font-size: $app-font-size-h3;
+}

@@ -1,0 +1,40 @@
+@import '@/assets/css/vars';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 15px;
+  box-shadow: 0px 0px 20px -10px #FF6347FF;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logo {
+  font-family: 'LogoFont', sans-serif;
+  font-size: 24px;
+  color: $form-primary-color;
+  background-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 4px;
+}
+
+.menu_button * {
+  fill: $color-orange
+}
+
+.menu_button:hover * {
+  fill: $color-orange-light
+}
+
+.menu_button {
+  height: 30px;
+  cursor: pointer;
+  width: 30px;
+}

@@ -1,0 +1,89 @@
+@import '@/assets/css/vars';
+
+/********** FORM **********/
+.form {
+  width: 400px;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px -10px $form-primary-color;
+}
+
+/********** INPUT **********/
+.input {
+  background: rgba(255, 99, 71, 0.08);
+  border: 1px transparent solid;
+  color: #ff7a63;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 14px;
+  caret-color: $form-primary-color;
+}
+
+.input:focus {
+  outline: none;
+  border-color: $form-primary-color;
+  background-color: #333333;
+}
+
+.input::placeholder {
+  color: rgba(159, 99, 93, 0.66);
+  font-size: $form-font-size;
+}
+
+/********** LABEL **********/
+.label {
+  display: block;
+  margin-bottom: 10px;
+  color: #f8d0c8;
+}
+
+/********** BUTTON **********/
+.button {
+  background-color: $form-primary-color;
+  border: 1px $app-bg-color solid;
+  padding: 8px 16px;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 20px;
+  color: $app-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 1px $form-primary-color solid;
+  color: $form-primary-color;
+}
+
+/********** ERROR **********/
+.error {
+  color: #b92222;
+  margin-bottom: 10px;
+}
+
+/********** FOOTER **********/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/********** HEADER **********/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  border-bottom: 1px $form-primary-color solid;
+  color: $app-font-color;
+  margin-bottom: 18px;
+  height: 30px;
+}
