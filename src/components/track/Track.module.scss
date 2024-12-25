@@ -27,10 +27,21 @@
 }
 
 .track_image {
-  border-radius: 50px;
+  border-radius: 30px;
   width: 60px;
   height: 60px;
   align-self: start;
+}
+
+.track_image_eq {
+  border-radius: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  align-self: start;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .track_title {

@@ -67,6 +67,8 @@ const QueueItem = ({track, onDrop, onDragStart}) => {
                 isDragOver={isDragOver}
             >
                 <TrackImage
+                    isPlaying={isPlaying}
+                    isActive={currentTrack.queue_id === track.queue_id}
                     src={import.meta.env.VITE_APP_BASE_URL + track.artwork}
                     alt={track.title}
                 />

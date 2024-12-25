@@ -37,6 +37,8 @@ const TrackItem = ({track}) => {
                 isActive={currentTrack.id === track.id}
             >
                 <TrackImage
+                    isPlaying={isPlaying}
+                    isActive={currentTrack.id === track.id}
                     src={import.meta.env.VITE_APP_BASE_URL + track.artwork}
                     alt={track.title}
                 />
