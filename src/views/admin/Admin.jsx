@@ -10,7 +10,6 @@ const Admin = () => {
     const [isUpdated, setIsUpdated] = useState(false);
     const [errors, setErrors] = useState([]);
     const [timeLastUpdate, setTimeLastUpdate] = useState();
-
     const [trackForUpload, setTrackForUpload] = useState();
 
     const getTimeLastUpdateTracksTable = async () => {
@@ -29,13 +28,18 @@ const Admin = () => {
             let formData = new FormData();
             formData.append('file', trackForUpload);
             const response = await axiosClient.post('/add_track', formData);
-            console.log(response.data);
+            if (response?.data?.errors?.file) {
+                setErrors(response?.data?.errors?.file);
+            } else {
+                console.log(response?.data);
+            }
         }
     }
 
     const handleFileChange = (e) => {
         if (e.target.files) {
             setTrackForUpload(e.target.files[0]);
+            setErrors([]);
         }
     };
 
@@ -74,6 +78,7 @@ const Admin = () => {
 
             <input type="file" onChange={handleFileChange} />
             <Button onClick={addTrack} title="Добавить трек"/>
+            <p>{errors.length > 0 && errors[0]}</p>
         </div>
     );
 }
