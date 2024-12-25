@@ -33,6 +33,12 @@
   align-self: start;
 }
 
+.image_container {
+  position: relative;
+  height: 60px;
+  cursor: pointer;
+}
+
 .track_image_eq {
   border-radius: 30px;
   position: absolute;

@@ -3,7 +3,7 @@ import gifImg from "@/assets/img/audio-eq.gif";
 
 const TrackImage = ({src, alt, isActive = false, isPlaying = false}) => {
     return(
-        <>
+        <div className={styles.image_container}>
             <img
                 src={src}
                 alt={alt}
@@ -16,7 +16,7 @@ const TrackImage = ({src, alt, isActive = false, isPlaying = false}) => {
                     className={styles.track_image_eq}
                 />
             }
-        </>
+        </div>
     );
 }
 
