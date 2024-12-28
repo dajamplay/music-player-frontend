@@ -8,7 +8,7 @@ import styles from './DefaultLayout.module.scss';
 import {useDispatch, useSelector} from "react-redux";
 import * as libActions from '@/store/actions/LibActions';
 import Footer from "@/components/footer/Footer.jsx";
-import {updateServerState} from "@/store/actions/appActions.js";
+import Disc from "@/components/background/Disc.jsx";
 
 const DefaultLayout = ({children}) => {
     const {setUser, token} = useStateContext();
@@ -37,6 +37,7 @@ const DefaultLayout = ({children}) => {
             <div className={styles.footer_wrapper}>
                 <Footer/>
             </div>
+            <Disc/>
         </div>
     );
 }
