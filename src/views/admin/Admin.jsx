@@ -69,7 +69,6 @@ const Admin = () => {
             <p>Последнее обновление: {timeLastUpdate}</p>
             {isUpdated &&
                 <div>
-                    <p>Статус: {updateStatus}</p>
                     <p>Обновлено: {updatedCount}</p>
                     <p>Ошибок: {failedCount}</p>
                 </div>
@@ -78,7 +77,6 @@ const Admin = () => {
 
             <input type="file" onChange={handleFileChange} />
             <Button onClick={addTrack} title="Добавить трек"/>
-            <p>{errors.length > 0 && errors[0]}</p>
         </div>
     );
 }

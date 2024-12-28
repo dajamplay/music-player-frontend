@@ -34,11 +34,11 @@ export const MusicPlayerProvider = ({children}) => {
         next();
     }, [tracks, currentTrack]);
 
-    const errorEvent = () => {
+    const errorEvent = useCallback((e) => {
         clearInterval(intervalRef.current);
         setIsPlaying(false);
-        console.log('ERROR');
-    }
+        next();
+    }, [tracks, currentTrack]);
 
     useEffect( () => {
         musicPlayer.addEventListener("ended" , endedEvent);
@@ -52,8 +52,8 @@ export const MusicPlayerProvider = ({children}) => {
 
     const load = (track) => {
         setPosition(0);
-        musicPlayer.src = import.meta.env.VITE_APP_BASE_URL + track.url;
         setCurrentTrack(track);
+        musicPlayer.src = import.meta.env.VITE_APP_BASE_URL + track.url;
         play();
     }
 
