@@ -12,7 +12,7 @@ const Disc = () => {
                  backgroundPosition: 'center',
                  backgroundSize: 'cover',
                  backgroundRepeat: 'no-repeat',
-                 opacity: 0.3,
+                 opacity: 0.2,
             }}
         >
             <img
