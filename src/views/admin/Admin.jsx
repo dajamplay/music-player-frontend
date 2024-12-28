@@ -1,6 +1,7 @@
 import axiosClient from "@/axios/axios.js";
 import {useEffect, useRef, useState} from "react";
 import Button from "@/components/ui/Button/Button.jsx";
+import styles from './Admin.module.scss';
 
 const Admin = () => {
 
@@ -17,6 +18,7 @@ const Admin = () => {
         const data = response.data
         const date = new Date(data).toLocaleString("ru-RU")
         setTimeLastUpdate(date.toString());
+        return date.toString();
     }
 
     useEffect(() => {
@@ -31,8 +33,12 @@ const Admin = () => {
             if (response?.data?.errors?.file) {
                 setErrors(response?.data?.errors?.file);
             } else {
-                console.log(response?.data);
+                setIsUpdated(true);
+                setUpdatedCount(response?.data?.updated);
+                setFailedCount(response?.data?.failed);
             }
+        } else {
+            alert('Нужно выбрать трек');
         }
     }
 
@@ -59,24 +65,27 @@ const Admin = () => {
         setUpdatedCount(data.updated);
         setFailedCount(data.failed);
         setErrors(data.errors);
-        console.log(data)
         await getTimeLastUpdateTracksTable();
+    }
+
+    const testDateUpdate = async () => {
+        alert(await getTimeLastUpdateTracksTable());
     }
 
     return(
         <div>
-            <h1>Admin</h1>
-            <p>Последнее обновление: {timeLastUpdate}</p>
-            {isUpdated &&
-                <div>
-                    <p>Обновлено: {updatedCount}</p>
-                    <p>Ошибок: {failedCount}</p>
-                </div>
-            }
-            <Button onClick={updateTracks} title="Обновить"/>
+            <h1>Панель администрирования</h1>
+            <h2>Последнее обновление БД: {timeLastUpdate}</h2>
+            <h2 className={styles.errors_title}>Ошибки: {errors?.length ?? '0'}</h2>
+            {errors.length > 0 && errors.map( (item, index) =>
+                <p className={styles.error_container} key={index}>{item}</p>
+            )}
+            {isUpdated && <h2>Обновлено: {updatedCount}</h2>}
 
-            <input type="file" onChange={handleFileChange} />
-            <Button onClick={addTrack} title="Добавить трек"/>
+            <input type="file" onChange={handleFileChange}/>
+            <Button onClick={addTrack} title="Добавить трек в БД"/>
+            <Button onClick={testDateUpdate} title="Проверить дату обновления"/>
+            <Button onClick={updateTracks} title="Полное обновление БД"/>
         </div>
     );
 }
