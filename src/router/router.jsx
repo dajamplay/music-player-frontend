@@ -1,6 +1,5 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
 import Signup from "../views/auth/Signup.jsx";
-import Users from "../views/user/Users.jsx";
 import NotFound from "../views/NotFound.jsx";
 import Login from "../views/auth/Login.jsx";
 import DefaultLayout from "../views/layouts/DefaultLayout.jsx";
@@ -21,10 +20,6 @@ const router = createBrowserRouter([
             {
                 path: '/queue',
                 element: <Queue/>,
-            },
-            {
-                path: '/users',
-                element: <Users/>,
             },
             {
                 path: '/tracks',
